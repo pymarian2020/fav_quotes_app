@@ -4,7 +4,7 @@ import gunicorn
 import os
 
 app = Flask(__name__)
-db_uri = os.environ.get('DB_URI', None)
+db_uri = os.environ.get('DATABASE_URL', None)
 
 #PASSWORD = "password"
 

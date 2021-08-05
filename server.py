@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
 import gunicorn
+import psycopg2
 import os
 
 app = Flask(__name__)
@@ -46,4 +47,4 @@ def process():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

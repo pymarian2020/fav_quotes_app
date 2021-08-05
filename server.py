@@ -1,10 +1,11 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
+import psycopg2
 import gunicorn
 import os
 
 app = Flask(__name__)
-db_uri = os.environ.get('DATABASE_URL', None)
+db_uri = os.environ.get('DATABASE_URI', None)
 
 #PASSWORD = "password"
 
